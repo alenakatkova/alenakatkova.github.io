@@ -6,14 +6,37 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
   <title>Your Portfolio</title>
 </head>
-<body class="bg-gray-100 flex flex-col min-h-screen">
+<body class="bg-gray-100 flex flex-col min-h-screen text-lg">
 <!-- Header -->
-<header class="bg-white py-4">
+<!--<header class="bg-white py-4">-->
+<!--  <nav class="container mx-auto flex items-center justify-between">-->
+<!--    <div class="text-xl font-semibold">-->
+<!--      Your Name-->
+<!--    </div>-->
+<!--    <ul class="hidden sm:flex space-x-6">-->
+<!--      <li><a href="#home" class="text-gray-600">Home</a></li>-->
+<!--      <li><a href="#portfolio" class="text-gray-600">Portfolio</a></li>-->
+<!--      <li><a href="#blog" class="text-gray-600">Blog</a></li>-->
+<!--      <li><a href="#skills" class="text-gray-600">Skills</a></li>-->
+<!--      <li><a href="#contact" class="text-gray-600">Contact</a></li>-->
+<!--    </ul>-->
+<!--  </nav>-->
+<!--</header>-->
+
+<!-- Header -->
+<header class="bg-white py-5 px-4 sm:px-2 xl:px-0">
   <nav class="container mx-auto flex items-center justify-between">
-    <div class="text-xl font-semibold">
-      Your Name
+    <div class="text-2xl font-semibold">
+      Alena Katkova
     </div>
-    <ul class="hidden sm:flex space-x-6">
+    <div class="sm:hidden">
+      <button id="menu-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-400 hover:text-gray-800 hover:border-gray-700">
+        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+        </svg>
+      </button>
+    </div>
+    <ul id="menu" class="hidden sm:flex space-x-6 text-2xl">
       <li><a href="#home" class="text-gray-600">Home</a></li>
       <li><a href="#portfolio" class="text-gray-600">Portfolio</a></li>
       <li><a href="#blog" class="text-gray-600">Blog</a></li>
@@ -22,6 +45,24 @@
     </ul>
   </nav>
 </header>
+
+<!-- Mobile menu container -->
+<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-white z-50">
+  <button id="close-menu" class="absolute top-4 right-4 flex items-center px-3 py-2 text-gray-500 hover:text-gray-800">
+    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10 9.293l6.364-6.364a1 1 0 111.414 1.414L11.414 10l6.364 6.364a1 1 0 01-1.414 1.414L10 11.414l-6.364 6.364a1 1 0 01-1.414-1.414L8.586 10 2.222 3.636a1 1 0 011.414-1.414L10 9.293z" clip-rule="evenodd"/>
+    </svg>
+  </button>
+  <nav class="h-full flex flex-col justify-center">
+    <ul class="text-center text-xl space-y-8">
+      <li><a href="#home" class="text-gray-600">Home</a></li>
+      <li><a href="#portfolio" class="text-gray-600">Portfolio</a></li>
+      <li><a href="#blog" class="text-gray-600">Blog</a></li>
+      <li><a href="#skills" class="text-gray-600">Skills</a></li>
+      <li><a href="#contact" class="text-gray-600">Contact</a></li>
+    </ul>
+  </nav>
+</div>
 
 <main class="flex-grow">
   <!-- Hero Section -->
@@ -54,5 +95,16 @@
     <!-- Add your content here -->ff
   </div>
 </footer>
+
+<script>
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+  });
+
+  document.getElementById("close-menu").addEventListener("click", function () {
+    document.getElementById("mobile-menu").classList.add("hidden");
+  });
+</script>
+
 </body>
 </html>
