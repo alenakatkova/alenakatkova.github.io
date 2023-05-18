@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/bbc28cc74c.js" crossorigin="anonymous"></script>
-  <title>Your Portfolio</title>
+  <title>My Portfolio</title>
 
   <style>
+      /**,*/
+      /**::before,*/
+      /**::after {*/
+      /*    box-sizing: border-box;*/
+      /*}*/
+
       .section-heading {
           color: #333;
           font-weight: 500;
@@ -25,28 +31,11 @@
 
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen text-lg">
-<!-- Header -->
-<!--<header class="bg-white py-4">-->
-<!--  <nav class="container mx-auto flex items-center justify-between">-->
-<!--    <div class="text-xl font-semibold">-->
-<!--      Your Name-->
-<!--    </div>-->
-<!--    <ul class="hidden sm:flex space-x-6">-->
-<!--      <li><a href="#home" class="text-gray-600">Home</a></li>-->
-<!--      <li><a href="#portfolio" class="text-gray-600">Portfolio</a></li>-->
-<!--      <li><a href="#blog" class="text-gray-600">Blog</a></li>-->
-<!--      <li><a href="#skills" class="text-gray-600">Skills</a></li>-->
-<!--      <li><a href="#contact" class="text-gray-600">Contact</a></li>-->
-<!--    </ul>-->
-<!--  </nav>-->
-<!--</header>-->
 
 <!-- Header -->
-<header class="bg-white py-5 px-4 sm:px-2 xl:px-0">
-  <nav class="container mx-auto flex items-center justify-between">
-<!--    <div class="text-2xl font-semibold">-->
-<!--      Alena Katkova-->
-<!--    </div>-->
+<!--<header class="bg-white py-5 px-4 sm:px-2 xl:px-0">-->
+<header class="bg-white py-5">
+  <nav class="container mx-auto px-20 flex items-center justify-between">
     <a href="index.html" class="text-xl text-gray-800 hover:text-gray-600">
       <i class="fas fa-home"></i>
     </a>
@@ -87,39 +76,49 @@
 
 <main class="flex-grow">
   <section class="hero-bg text-white py-20">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto max-w-6xl px-10">
 
-      <h1 class="text-4xl md:text-5xl font-thin uppercase mb-1">Alena Katkova</h1>
-      <p class="text-lg md:text-xl font-thin mb-4">Junior Frontend Developer</p>
-      <p class="text-lg md:text-xl text-opacity-50 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h1 class="text-4xl md:text-6xl font-thin uppercase mb-3">Alena Katkova</h1>
+      <p class="text-lg md:text-2xl font-thin mb-10">Frontend Developer based in <i class="fas fa-map-marker-alt ml-2 mr-1"></i> Lausanne, Switzerland</p>
+      <p class="text-lg md:text-xl text-opacity-50 mb-2">Bachelor in Software Engineering, with experience both in Frontend and Backend development.</p>
+      <p class="text-lg md:text-xl text-opacity-50 mb-8">Being a Frontend fanatic, there's nothing quite like the thrill of creating pixel-perfect web applications. It's about digging deep into those complex details, then transforming them into smooth user experiences that solve business challenges. Whether it's refining code or resolving a tough business problem, I'm all in!</p>
 
       <!-- Skill block (list with icons) -->
-      <div class="flex flex-wrap gap-4 mb-8">
-        <div class="flex items-center">
-          <i class="fab fa-html5 text-2xl"></i>
-          <span class="ml-2 text-lg">HTML5</span>
-        </div>
-        <div class="flex items-center">
-          <i class="fab fa-css3-alt text-2xl"></i>
-          <span class="ml-2 text-lg">CSS3</span>
-        </div>
-        <div class="flex items-center">
-          <i class="fab fa-js text-2xl"></i>
-          <span class="ml-2 text-lg">JavaScript</span>
-        </div>
-        <div class="flex items-center">
-          <i class="fab fa-react text-2xl"></i>
-          <span class="ml-2 text-lg">React</span>
-        </div>
-        <div class="flex items-center">
-          <i class="fab fa-vuejs text-2xl"></i>
-          <span class="ml-2 text-lg">Vue.js</span>
-        </div>
-        <div class="flex items-center">
-          <i class="fas fa-code text-2xl"></i>
-          <span class="ml-2 text-lg">TypeScript</span>
+      <div>
+<!--        <h2 class="text-3xl md:text-2xl font-thin mb-2">My main frontend stack:</h2>-->
+        <div class="flex flex-wrap gap-4 mb-8">
+          <div class="flex items-center">
+            <i class="fab fa-html5 text-2xl"></i>
+            <span class="ml-2 text-lg">HTML5</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fab fa-css3-alt text-2xl"></i>
+            <span class="ml-2 text-lg">CSS3</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fab fa-js text-2xl"></i>
+            <span class="ml-2 text-lg">JavaScript</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-code text-2xl"></i>
+            <span class="ml-2 text-lg">TypeScript</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fab fa-react text-2xl"></i>
+            <span class="ml-2 text-lg">React</span>
+          </div>
+          <!--        <div class="flex items-center">-->
+          <!--          <i class="fab fa-vuejs text-2xl"></i>-->
+          <!--          <span class="ml-2 text-lg">Vue.js</span>-->
+          <!--        </div>-->
+
+          <a href="#skills" class="inline-flex items-center text-blue-500 hover:text-blue-700 transition-colors duration-200 ease-in-out text-lg md:text-xl font-semibold">
+            More skills
+            <i class="fas fa-arrow-down ml-2"></i>
+          </a>
         </div>
       </div>
+
 
       <!-- Buttons -->
       <div class="flex flex-wrap gap-4">
@@ -135,22 +134,107 @@
 
 
   <!-- About Me Section -->
+  <section class="bg-white py-20">
+    <div class="container mx-auto px-20">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4">About Me</h2>
 
-  <section id="about" class="py-20">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl mb-8 section-heading">About Me</h2>
-      <div class="flex flex-wrap md:flex-nowrap items-center">
-        <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8">
-          <img class="w-full h-auto shadow-lg" src="https://via.placeholder.com/400x400" alt="Your Photo">
+
+
+
+<!--      <div class="grid md:grid-cols-2 gap-4 mb-8">-->
+        <div>
+          <!-- Description -->
+          <p class="text-lg md:text-xl mb-8">
+            I'm a recent graduate with a degree in Computer Science, passionate about web development and eager to dive into the professional world. I have a solid understanding of modern web technologies, including HTML, CSS, JavaScript, React, and Vue.js. I've developed a range of projects, honing my problem-solving skills, learning to work in a team, and meeting tight deadlines. I'm now looking for my first opportunity to apply these skills in a Frontend Developer role.
+          </p>
+
+          <!-- Bullet-point list -->
+          <ul class="list-none pl-0 mb-8">
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Solid understanding of HTML, CSS, and JavaScript
+            </li>
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Experience with modern frameworks: React and Vue.js
+            </li>
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Strong problem-solving skills
+            </li>
+            <li class="flex items-center mb-2">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Team player and excellent communicator
+            </li>
+          </ul>
         </div>
-        <div class="w-full md:w-2/3 text-2xl">
-          <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod tincidunt sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam commodo eros sit amet velit accumsan, vitae malesuada ipsum bibendum.</p>
-          <p class="mb-6">Curabitur id tempor ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed cursus ipsum justo, eu finibus arcu auctor eget. Quisque id venenatis justo. Suspendisse potenti.</p>
-          <p>Etiam sed lacus ac neque lacinia pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc id urna lacinia, varius eros vel, ultricies justo.</p>
+
+        <div class="mb-10">
+          <p class="text-lg md:text-xl mb-8">
+            In addition to my frontend skills, I also have some experience with backend development. I'm comfortable working with both the frontend and backend to build complete, full-stack applications.
+          </p>
+          <p>In my projects I used these technologies: <i class="fab fa-node-js ml-2 mr-1"></i> Node.js,
+            <i class="fas fa-cog ml-2 mr-1"></i> Express.js,
+            <i class="fas fa-database ml-2 mr-1"></i> PostgreSQL,
+            <i class="fas fa-database ml-2 mr-1"></i> MySQL,
+            <i class="fas fa-cog ml-2 mr-1"></i> Sequelize,
+            <i class="fas fa-database ml-2 mr-1"></i> MongoDB, and
+            <i class="fab fa-docker ml-2 mr-1"></i> Docker.</p>
+<!--          <ul class="list-none pl-0">-->
+<!--            <li class="flex items-center mb-2">-->
+<!--              <i class="fab fa-node-js text-green-500 mr-2"></i>-->
+<!--              Node.js-->
+<!--            </li>-->
+<!--            <li class="flex items-center mb-2">-->
+<!--              <i class="fas fa-cog text-green-500 mr-2"></i>-->
+<!--              Express.js-->
+<!--            </li>-->
+<!--            <li class="flex items-center mb-2">-->
+<!--              <i class="fas fa-database text-green-500 mr-2"></i>-->
+<!--              PostgreSQL-->
+<!--            </li>-->
+<!--            <li class="flex items-center mb-2">-->
+<!--              <i class="fas fa-database text-green-500 mr-2"></i>-->
+<!--              MySQL-->
+<!--            </li>-->
+<!--            <li class="flex items-center mb-2">-->
+<!--              <i class="fas fa-cog text-green-500 mr-2"></i>-->
+<!--              Sequelize-->
+<!--            </li>-->
+<!--            <li class="flex items-center mb-2">-->
+<!--              <i class="fas fa-database text-green-500 mr-2"></i>-->
+<!--              MongoDB-->
+<!--            </li>-->
+<!--            <li class="flex items-center mb-2">-->
+<!--              <i class="fab fa-docker text-green-500 mr-2"></i>-->
+<!--              Docker-->
+<!--            </li>-->
+<!--          </ul>-->
         </div>
+<!--      </div>-->
+      <!-- Call to action -->
+      <div class="bg-blue-100 rounded-md px-10 py-10 text-blue-800">
+        <h3 class="text-2xl font-semibold mb-2">Let's build something great together!</h3>
+        <p class="mb-4">If you're looking for a dedicated and passionate Frontend Developer, I'd love to hear from you. Get in touch and let's discuss how we can collaborate on your next project.</p>
+        <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-md text-lg font-semibold text-white">Contact Me</a>
       </div>
     </div>
   </section>
+<!--  <section id="about" class="py-20">-->
+<!--    <div class="container mx-auto px-4">-->
+<!--      <h2 class="text-3xl md:text-4xl mb-8 section-heading">About Me</h2>-->
+<!--      <div class="flex flex-wrap md:flex-nowrap items-center">-->
+<!--        <div class="w-full md:w-1/3 mb-8 md:mb-0 md:pr-8">-->
+<!--          <img class="w-full h-auto shadow-lg" src="https://via.placeholder.com/400x400" alt="Your Photo">-->
+<!--        </div>-->
+<!--        <div class="w-full md:w-2/3 text-2xl">-->
+<!--          <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod tincidunt sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam commodo eros sit amet velit accumsan, vitae malesuada ipsum bibendum.</p>-->
+<!--          <p class="mb-6">Curabitur id tempor ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed cursus ipsum justo, eu finibus arcu auctor eget. Quisque id venenatis justo. Suspendisse potenti.</p>-->
+<!--          <p>Etiam sed lacus ac neque lacinia pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc id urna lacinia, varius eros vel, ultricies justo.</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 
   <!-- Featured Projects Section -->
 <!--  <section id="portfolio" class="container mx-auto px-4 py-16">-->
