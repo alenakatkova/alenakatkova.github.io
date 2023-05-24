@@ -19,7 +19,7 @@ class Header extends HTMLElement {
             </button>
           </div>
           <ul id="menu" class="hidden sm:flex space-x-6 text-2xl">
-            <li><a href="#portfolio" class="text-gray-600">Portfolio</a></li>
+            <li><a href="portfolio.html" class="text-gray-600">Portfolio</a></li>
             <li><a href="#blog" class="text-gray-600">Blog</a></li>
             <li><a href="#contact" class="text-gray-600">Contact</a></li>
           </ul>
@@ -36,7 +36,7 @@ class Header extends HTMLElement {
         <nav class="h-full flex flex-col justify-center">
           <ul class="text-center text-xl space-y-8">
             <li><a href="#home" class="text-gray-600">About</a></li>
-            <li><a href="#portfolio" class="text-gray-600">Portfolio</a></li>
+            <li><a href="portfolio.html" class="text-gray-600">Portfolio</a></li>
             <li><a href="#blog" class="text-gray-600">Blog</a></li>
             <li><a href="#contact" class="text-gray-600">Contact</a></li>
           </ul>
