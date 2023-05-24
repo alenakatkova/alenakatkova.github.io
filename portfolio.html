@@ -12,9 +12,62 @@
 <header-component></header-component>
 
 <main class="flex-grow">
+  <section id="filters">
+    <div id="filter-menu" class="container mx-auto max-w-6xl px-10 pt-6">
+      <div class="flex flex-row items-center mb-4">
+        <h2 class="font-bold text-lg mr-2">Filter projects by stack</h2>
+        <button class="filter-btn px-2 py-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="*">Reset</button>
+      </div>
+
+      <div class="flex flex-row mb-1 items-center">
+        <h3 class="text-lg mr-2">Languages</h3>
+        <div class="text-base">
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="javascript">JavaScript</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="typescript">TypeScript</button>
+        </div>
+      </div>
+      <div class="flex flex-row mb-1 items-center">
+        <h3 class="text-lg mr-2">Frontend</h3>
+        <div class="text-base">
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="css">CSS</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="html">HTML</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="react">React</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="vue">Vue</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="reacthookform">React Hook Form</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="axios">Axios</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="mui">Material UI</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="bootstrap">Bootstrap</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="tailwind">Tailwind</button>
+        </div>
+      </div>
+      <div class="flex flex-row mb-1 items-center">
+        <h3 class="text-lg mr-2">Backend</h3>
+        <div class="text-base">
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="nodejs">Node.js</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="expressjs">Express.js</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="postgresql">PostgreSQL</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="sequelize">Sequelize</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="mysql">MySQL</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="redis">Redis</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="mongodb">MongoDB</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="mongoose">Mongoose</button>
+        </div>
+      </div>
+      <div class="flex flex-row mb-1 items-center">
+        <h3 class="text-lg mr-2">Tools</h3>
+        <div class="text-base">
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="docker">Docker</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="webpack">Webpack</button>
+          <button class="filter-btn px-2 py-1 m-1 rounded bg-gray-200 cursor-pointer hover:bg-gray-300" data-filter="gulp">Gulp</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <section id="portfolio">
     <div class="container mx-auto max-w-6xl px-10">
-      <div class="flex flex-wrap justify-between mx-auto py-6 px-4" id="project-cards-container"></div>
+      <div class="flex flex-wrap justify-between mx-auto py-6" id="project-cards-container"></div>
     </div>
   </section>
 </main>
@@ -23,7 +76,7 @@
 <footer-component></footer-component>
 
 <template id="project-card-template">
-  <div class="card flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden mb-6 w-full">
+  <div class="card flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden mb-6 w-full" data-tags="">
     <img class="w-full h-auto object-cover md:w-1/4">
     <div class="p-6 w-full md:w-3/4">
       <h2 class="text-2xl font-bold mb-2"></h2>

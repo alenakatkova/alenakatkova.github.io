@@ -60,6 +60,7 @@ projects.forEach(project => {
     const span = document.createElement('span');
     span.className = "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2";
     span.textContent = `#${tag}`;
+    projectCard.querySelector('.card').dataset.tags = project.tags.join(',');
     projectCard.querySelector('div.mb-4').appendChild(span);
   });
 
@@ -72,3 +73,21 @@ projects.forEach(project => {
 });
 
 console.log("ff")
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', filterProjects);
+});
+
+function filterProjects(e) {
+  const filter = e.target.dataset.filter;
+
+  document.querySelectorAll('.card').forEach(card => {
+    const tags = card.dataset.tags.split(',');
+
+    if (filter === '*' || tags.includes(filter)) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
