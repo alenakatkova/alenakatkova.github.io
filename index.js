@@ -1,11 +1,13 @@
 const projects = [
   {
-    screenshot: 'project-screenshot-1.jpg',
-    title: 'Project Name 1',
-    description: 'This is an innovative solution that combines modern web technologies to deliver an outstanding user experience. It is fully responsive, optimized for performance, and follows best practices for security and SEO. This project has been an amazing opportunity to explore cutting-edge technologies and apply them in a real-world scenario.',
-    tags: ['html', 'css', 'javascript', 'react'],
-    repoLink: 'https://github.com/your-username/your-repository-1',
-    blogLink: 'blog-post-1.html'
+    screenshot: 'img/projects-gallery/mishka-en.png',
+    title: 'Responsive small business website',
+    description: 'This project involved the development of a responsive website for a small handmade products store. The website comprises three key sections: a home page presenting an overview of the business, a catalog showcasing the array of products available, and a dedicated page featuring a user-friendly form for customers to request custom knitting orders.\n' +
+        '\n' +
+        'The landing page is designed to be fully responsive, ensuring seamless navigation and usability across mobile, tablet, and desktop devices. It utilizes SASS for efficient CSS writing, Gulp for task automation, and adheres to the BEM methodology for scalable and maintainable CSS.',
+    tags: ['html', 'css', 'bem', 'sass', 'gulp', 'javascript'],
+    repoLink: 'https://github.com/alenakatkova/mishka-en',
+    blogLink: 'none'
   },
   {
     screenshot: 'project-screenshot-2.jpg',
@@ -50,7 +52,7 @@ projects.forEach(project => {
   projectCard.querySelector('img').src = project.screenshot;
 
   // Set project name
-  projectCard.querySelector('h2').textContent = project.name;
+  projectCard.querySelector('h2').textContent = project.title;
 
   // Set project description
   projectCard.querySelector('p').textContent = project.description;
@@ -66,8 +68,14 @@ projects.forEach(project => {
 
   // Set links
   const links = projectCard.querySelectorAll('a');
-  links[0].href = project.blogLink;
+  // if (project.blogLink === 'none') {
+  //   links[0].style.visibility = 'hidden';
+  // } else {
+    links[0].href = project.blogLink;
+  // }
   links[1].href = project.repoLink;
+
+
 
   container.appendChild(projectCard);
 });
