@@ -8,9 +8,9 @@ class Header extends HTMLElement {
     this.innerHTML = `
       <style>
         .active {
-          color: red;
-          background-color: pink;
+          background-color: #f3f4f6;
           height: 100%;
+          text-decoration: underline;
         }
         
         .desktop-nav-link:hover {
