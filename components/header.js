@@ -34,7 +34,7 @@ class Header extends HTMLElement {
           <nav id="menu" class="hidden sm:flex items-center justify-end w-full">
             <a id="portfolio-link" href="portfolio.html" class="${this._desktopNavLinkClasses}">Portfolio</a>
             <a id="blog-link" href="blog.html" class="${this._desktopNavLinkClasses}">Blog</a>
-            <a id="skills-link" href="skills.html" class="${this._desktopNavLinkClasses}">Skills</a>
+<!--            <a id="skills-link" href="skills.html" class="${this._desktopNavLinkClasses}">Skills</a>-->
             <a id="contact-link" href="contact.html" class="${this._desktopNavLinkClasses}">Contact</a>
           </nav>
         </div>

@@ -1,46 +1,38 @@
 const projects = [
   {
+    screenshot: 'none',
+    title: 'Project management tool for architecture bureau',
+    description: 'For an architecture bureau, I developed a robust project management web application that transformed their operational workflow. This tool revolves around managing various project documents, such as blueprints, floor layouts, and other essential artifacts. The application\'s unique selling point is its intuitive document approval feature, which ensures smooth collaboration between managers and clients.\n' +
+        '\n' +
+        'The application includes different user roles: administrators, bureau\'s project managers, clients, and contractors. This setup enables efficient communication and document sharing. Project managers upload the necessary documents, clients review and either approve or request revisions, and finally, all parties, including contractors, have access to the finalized documents.\n' +
+        '\n' +
+        'For the technical stack, I chose TypeScript, Next.js on the frontend, Express.js on the backend, and PostgreSQL with Sequelize for data management. User authentication was handled via session-based authentication, with sessions stored in Redis. I also used the Yandex.Disk REST API for secure file storage, ensuring all documents are safe and easily retrievable. This project marked a significant milestone in my career, as I moved beyond academic projects to deliver a full-fledged, complex web application that meets the needs of my client.',
+    tags: ['typescript', 'react', 'nextjs', 'reacthookform', 'axios', 'mui', 'nodejs', 'expressjs', 'postgresql', 'sequelize', 'redis'],
+    repoLink: undefined,
+    blogLink: undefined,
+    ghPagesLink: undefined
+  },
+  {
+    screenshot: 'none',
+    title: 'none',
+    description: '',
+    tags: [],
+    repoLink: undefined,
+    blogLink: undefined,
+    ghPagesLink: undefined
+  },
+  {
     screenshot: 'img/projects-gallery/mishka-en.png',
-    title: 'Responsive small business website',
+    title: 'Small business responsive website',
     description: 'This project involved the development of a responsive website for a small handmade products store. The website comprises three key sections: a home page presenting an overview of the business, a catalog showcasing the array of products available, and a dedicated page featuring a user-friendly form for customers to request custom knitting orders.\n' +
         '\n' +
         'The landing page is designed to be fully responsive, ensuring seamless navigation and usability across mobile, tablet, and desktop devices. It utilizes SASS for efficient CSS writing, Gulp for task automation, and adheres to the BEM methodology for scalable and maintainable CSS.',
     tags: ['html', 'css', 'bem', 'sass', 'gulp', 'javascript'],
     repoLink: 'https://github.com/alenakatkova/mishka-en',
-    blogLink: 'none'
+    ghPagesLink: undefined,
+    blogLink: undefined
   },
-  {
-    screenshot: 'project-screenshot-2.jpg',
-    title: 'Project Name 2',
-    description: 'This application aims to improve productivity and efficiency in daily tasks. Built with a thoughtful UI and powerful features, it\'s designed to make work more pleasant and intuitive. It has been a great experience working on this project and implementing some of the latest web technologies.',
-    tags: ['vue', 'javascript', 'css', 'node'],
-    repoLink: 'https://github.com/your-username/your-repository-2',
-    blogLink: 'blog-post-2.html'
-  },
-  {
-    screenshot: 'project-screenshot-3.jpg',
-    title: 'Project Name 3',
-    description: 'This web application showcases a clean, modern design that prioritizes user experience and functionality. It has been a rewarding challenge to build and optimize this project. It stands as a testament to the power and versatility of modern web technologies.',
-    tags: ['react', 'javascript', 'css', 'node', 'express'],
-    repoLink: 'https://github.com/your-username/your-repository-3',
-    blogLink: 'blog-post-3.html'
-  },
-  {
-    screenshot: 'project-screenshot-4.jpg',
-    title: 'Project Name 4',
-    description: 'This e-commerce website is a fully-fledged platform with user authentication, product listings, and a shopping cart. It was a great opportunity to delve into complex state management and database interactions. I’m incredibly proud of the robust and scalable solution we\'ve developed.',
-    tags: ['react', 'javascript', 'css', 'node', 'express', 'mongodb'],
-    repoLink: 'https://github.com/your-username/your-repository-4',
-    blogLink: 'blog-post-4.html'
-  },
-  {
-    screenshot: 'project-screenshot-5.jpg',
-    title: 'Project Name 5',
-    description: 'This project is a social network for developers where they can share their ideas, projects, and get feedback. It has been a great learning experience, not only in terms of coding, but also for working with a team and coordinating efforts to build a large-scale application.',
-    tags: ['vue', 'javascript', 'css', 'node', 'express', 'mysql'],
-    repoLink: 'https://github.com/your-username/your-repository-5',
-    blogLink: 'blog-post-5.html'
-  },
+
 ];
 const template = document.getElementById('project-card-template');
 const container = document.getElementById('project-cards-container');
@@ -66,21 +58,30 @@ projects.forEach(project => {
     projectCard.querySelector('div.mb-4').appendChild(span);
   });
 
-  // Set links
-  const links = projectCard.querySelectorAll('a');
-  // if (project.blogLink === 'none') {
-  //   links[0].style.visibility = 'hidden';
-  // } else {
-    links[0].href = project.blogLink;
-  // }
-  links[1].href = project.repoLink;
 
+  const linksContainer = projectCard.querySelector('.links-container')
+  const links = Array.from(linksContainer.querySelectorAll('a')).reduce((acc, curr) => {
+    acc[curr.dataset.type] = curr;
+    return acc;
+  }, {});
 
+  let noLinkProvidedCounter = 0;
+  for (let key in links) {
+    if(project[key] === undefined) {
+      links[key].style.visibility = 'hidden';
+      noLinkProvidedCounter++;
+    } else {
+      links[key].href = project[key];
+    }
+    console.log(key)
+  }
+
+  if (noLinkProvidedCounter === 3) {
+    linksContainer.style.display = 'none';
+  }
 
   container.appendChild(projectCard);
 });
-
-console.log("ff")
 
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', filterProjects);
