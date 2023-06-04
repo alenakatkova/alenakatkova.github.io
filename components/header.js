@@ -35,7 +35,7 @@ class Header extends HTMLElement {
             <a id="portfolio-link" href="portfolio.html" class="${this._desktopNavLinkClasses}">Portfolio</a>
             <a id="blog-link" href="blog.html" class="${this._desktopNavLinkClasses}">Blog</a>
 <!--            <a id="skills-link" href="skills.html" class="${this._desktopNavLinkClasses}">Skills</a>-->
-            <a id="contact-link" href="contact.html" class="${this._desktopNavLinkClasses}">Contact</a>
+            <a id="contact-link" href="contacts.html" class="${this._desktopNavLinkClasses}">Contact</a>
           </nav>
         </div>
       </header>
@@ -72,7 +72,7 @@ class Header extends HTMLElement {
             <li><a href="#home" class="text-gray-600">About</a></li>
             <li><a href="portfolio.html" class="text-gray-600">Portfolio</a></li>
             <li><a href="#blog" class="text-gray-600">Blog</a></li>
-            <li><a href="#contact" class="text-gray-600">Contact</a></li>
+            <li><a href="contatcs.html" class="text-gray-600">Contact</a></li>
           </ul>
         </nav>
       </div>
