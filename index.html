@@ -9,25 +9,16 @@
 
   <style>
       .custom-list li:before {
-          content: "\2022";  /* Add bullet */
+          content: "\2022";
           font-weight: bold;
-          color: darkseagreen;  /* Change the color of the bullet */
-          display: inline-block;  /* Needed to add space around the bullet */
-          width: 1em;  /* Also needed for space (tweak if needed) */
-          margin-left: -1em;  /* Also needed for space (tweak if needed) */
-      }
-
-      .section-heading {
-          color: #333;
-          font-weight: 500;
-      }
-      .section-subheading {
-          color: #666;
-          font-weight: 400;
+          color: darkseagreen;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
       }
 
       .hero-bg {
-          background-image: linear-gradient(to right, #1e3c72 0%, #2a5298 100%);
+          background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
       }
   </style>
 
@@ -35,62 +26,52 @@
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen text-lg">
 
-
 <!-- Custom Header Component -->
 <header-component></header-component>
 
-
-
-
 <main class="flex-grow">
-  <section class="hero-bg text-white py-20">
+  <!-- Hero section -->
+  <section class="hero-bg py-24">
     <div class="container mx-auto max-w-6xl px-10">
-      <h1 class="text-4xl md:text-6xl font-thin uppercase mb-3">Alena Katkova</h1>
-      <p class="text-lg md:text-2xl font-thin mb-10">Frontend Developer <br class="block sm:hidden">based in <i class="fas fa-map-marker-alt ml-2 mr-1"></i> Lausanne, Switzerland</p>
-      <p class="text-lg md:text-xl text-opacity-50 mb-2">Bachelor in Software Engineering, with experience both in Frontend and Backend development.</p>
-      <p class="text-lg md:text-xl text-opacity-50 mb-8">Being a Frontend fanatic, there's nothing quite like the thrill of creating web applications. It's about digging deep into those complex details, then transforming them into smooth user experiences that solve business challenges. Whether it's refining code or resolving a tough business problem, I'm all in!</p>
+      <h1 class="text-5xl md:text-7xl mb-5 text-gray-800">Hello, I'm Alena!</h1>
+      <p class="text-xl md:text-3xl font-light mb-10 text-gray-700">Frontend Developer based in Lausanne, Switzerland</p>
+      <p class="text-xl md:text-xl mb-10 text-gray-700">My enthusiasm lies in creating intricate web applications and transforming those complex details into user-friendly experiences that address business needs. Whether it involves perfecting the code or tackling a challenging business issue, I'm fully committed!</p>
 
-      <!-- Skill block -->
+      <!-- Skills block in Hero -->
       <div>
-        <!--        <h2 class="text-3xl md:text-2xl font-thin mb-2">My main frontend stack:</h2>-->
-        <div class="flex flex-wrap gap-4 mb-8">
+        <div class="flex flex-wrap gap-6 mb-10">
           <div class="flex items-center">
-            <i class="fab fa-html5 text-2xl"></i>
-            <span class="ml-2 text-lg">HTML5</span>
+            <i class="fab fa-html5 text-3xl text-gray-700"></i>
+            <span class="ml-3 text-xl text-gray-800">HTML5</span>
           </div>
           <div class="flex items-center">
-            <i class="fab fa-css3-alt text-2xl"></i>
-            <span class="ml-2 text-lg">CSS3</span>
+            <i class="fab fa-css3-alt text-3xl text-gray-700"></i>
+            <span class="ml-3 text-xl text-gray-800">CSS3</span>
           </div>
           <div class="flex items-center">
-            <i class="fab fa-js text-2xl"></i>
-            <span class="ml-2 text-lg">JavaScript</span>
+            <i class="fab fa-js text-3xl text-gray-700"></i>
+            <span class="ml-3 text-xl text-gray-800">JavaScript</span>
           </div>
           <div class="flex items-center">
-            <i class="fas fa-code text-2xl"></i>
-            <span class="ml-2 text-lg">TypeScript</span>
+            <i class="fas fa-code text-3xl text-gray-700"></i>
+            <span class="ml-3 text-xl text-gray-800">TypeScript</span>
           </div>
           <div class="flex items-center">
-            <i class="fab fa-react text-2xl"></i>
-            <span class="ml-2 text-lg">React</span>
+            <i class="fab fa-react text-3xl text-gray-700"></i>
+            <span class="ml-3 text-xl text-gray-800">React</span>
           </div>
-          <!--        <div class="flex items-center">-->
-          <!--          <i class="fab fa-vuejs text-2xl"></i>-->
-          <!--          <span class="ml-2 text-lg">Vue.js</span>-->
-          <!--        </div>-->
 
-          <a href="#skills" class="inline-flex items-center text-blue-500 hover:text-blue-700 transition-colors duration-200 ease-in-out text-lg md:text-xl font-semibold">
+          <a href="#skills" class="inline-flex items-center text-blue-700 hover:text-blue-900 transition-colors duration-200 ease-in-out text-xl md:text-xl font-semibold">
             More skills
             <i class="fas fa-arrow-down ml-2"></i>
           </a>
         </div>
       </div>
 
-
-      <!-- Action buttons block -->
-      <div class="flex flex-wrap gap-4">
-        <a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-md text-lg font-semibold">Connect on LinkedIn</a>
-        <a href="files/CV_Alena_Katkova_frontend_developer.pdf" download class="bg-gray-600 hover:bg-gray-700 px-6 py-2 rounded-md text-lg font-semibold">Download CV</a>
+      <!-- Buttons block -->
+      <div class="flex flex-wrap gap-6 mt-6">
+        <a href="https://www.linkedin.com/in/alena-a-katkova/" target="_blank" rel="noopener noreferrer" class="bg-blue-700 hover:bg-blue-800 px-6 py-2 rounded-lg font-semibold text-white">Connect on LinkedIn</a>
+        <a href="files/CV_Alena_Katkova_frontend_developer.pdf" download class="bg-gray-700 hover:bg-gray-800 px-6 py-2 rounded-lg font-semibold text-white">Download CV</a>
       </div>
     </div>
   </section>
