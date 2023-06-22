@@ -47,18 +47,21 @@ const projects = [
     ghPagesLink: undefined,
     blogLink: undefined
   },
-  {
-    screenshot: 'none',
-    title: 'none',
+];
+const template = document.getElementById('project-card-template');
+const container = document.getElementById('project-cards-container');
+
+/**
+{
+  screenshot: 'none',
+      title: 'none',
     description: 'none',
     tags: [],
     repoLink: undefined,
     blogLink: undefined,
     ghPagesLink: undefined
-  },
-];
-const template = document.getElementById('project-card-template');
-const container = document.getElementById('project-cards-container');
+},
+ */
 
 projects.forEach(project => {
   const projectCard = document.importNode(template.content, true);
