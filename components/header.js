@@ -44,7 +44,6 @@ class Header extends HTMLElement {
     const links = {
       'about-link': 'index.html',
       'portfolio-link': 'portfolio.html',
-      'blog-link': 'blog.html'
     };
 
     const currentLocation = window.location.href;
