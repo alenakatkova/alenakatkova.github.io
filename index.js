@@ -99,7 +99,6 @@ projects.forEach(project => {
     } else {
       links[key].href = project[key];
     }
-    console.log(key)
   }
 
   if (noLinkProvidedCounter === 3) {

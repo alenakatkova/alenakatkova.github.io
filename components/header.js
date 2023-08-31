@@ -47,10 +47,11 @@ class Header extends HTMLElement {
     };
 
     const currentLocation = window.location.href;
+    let isDefault = currentLocation.endsWith('/') || currentLocation.endsWith('index.html');
 
     Object.entries(links).forEach(([id, href]) => {
       const link = this.querySelector('#' + id);
-      if (currentLocation.includes(href)) {
+      if ((isDefault && id === 'about-link') || currentLocation.includes(href)) {
         link.classList.add('active');
       } else {
         link.classList.remove('active');
