@@ -51,6 +51,7 @@ const projects = [
 const template = document.getElementById('project-card-template');
 const container = document.getElementById('project-cards-container');
 
+// Project template
 /**
 {
   screenshot: 'none',
@@ -66,16 +67,10 @@ const container = document.getElementById('project-cards-container');
 projects.forEach(project => {
   const projectCard = document.importNode(template.content, true);
 
-  // Set image source
   projectCard.querySelector('img').src = project.screenshot;
-
-  // Set project name
   projectCard.querySelector('h2').textContent = project.title;
-
-  // Set project description
   projectCard.querySelector('p').textContent = project.description;
 
-  // Set project tags
   project.tags.forEach(tag => {
     const span = document.createElement('span');
     span.className = "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2";
@@ -83,7 +78,6 @@ projects.forEach(project => {
     projectCard.querySelector('.card').dataset.tags = project.tags.join(',');
     projectCard.querySelector('div.mb-4').appendChild(span);
   });
-
 
   const linksContainer = projectCard.querySelector('.links-container')
   const links = Array.from(linksContainer.querySelectorAll('a')).reduce((acc, curr) => {
