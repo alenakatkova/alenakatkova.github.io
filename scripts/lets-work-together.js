@@ -1,0 +1,6 @@
+console.log("Let's build something great together!")
+console.log("If you're looking for a dedicated and passionate Front-end or Full-stack Developer, I'd love to hear from you.")
+console.log("Get in touch and let's discuss how we can collaborate on your next project.")
+console.log("Email: alena.a.katkova@gmail.com")
+console.log("LinkedIn: www.linkedin.com/in/alena-a-katkova")
+console.log("Phone: 078-675-80-67")
